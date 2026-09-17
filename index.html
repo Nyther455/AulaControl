@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AulaControl</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h1>🎓 AulaControl</h1>
+        <p>Sistema de asistencia para docentes</p>
+    </div>
+</header>
+
+<main>
+
+    <section class="panel">
+        <h2>📚 Datos de la clase</h2>
+
+        <div class="form-grid">
+            <div>
+                <label for="grupo">Grupo</label>
+                <input id="grupo" type="text" placeholder="Ej: 2°1">
+            </div>
+
+            <div>
+                <label for="fecha">Fecha</label>
+                <input id="fecha" type="date">
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>➕ Agregar estudiante</h2>
+
+        <div class="agregar">
+            <input
+                id="nombre"
+                type="text"
+                placeholder="Nombre del estudiante"
+                autocomplete="off"
+            >
+
+            <button id="btnAgregar">Agregar</button>
+        </div>
+    </section>
+
+    <section class="estadisticas">
+
+        <div class="stat">
+            <span>👥</span>
+            <div>
+                <strong id="total">0</strong>
+                <p>Estudiantes</p>
+            </div>
+        </div>
+
+        <div class="stat presente">
+            <span>✓</span>
+            <div>
+                <strong id="presentes">0</strong>
+                <p>Presentes</p>
+            </div>
+        </div>
+
+        <div class="stat ausente">
+            <span>✕</span>
+            <div>
+                <strong id="ausentes">0</strong>
+                <p>Ausentes</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="panel">
+
+        <div class="titulo-lista">
+            <h2>📝 Lista de asistencia</h2>
+            <button class="peligro" id="btnBorrar">Borrar lista</button>
+        </div>
+
+        <div id="mensajeVacio" class="vacio">
+            Todavía no hay estudiantes registrados.
+        </div>
+
+        <div id="listaEstudiantes"></div>
+
+    </section>
+
+</main>
+
+<footer>
+    AulaControl • Proyecto educativo
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
